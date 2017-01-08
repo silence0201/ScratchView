@@ -44,7 +44,6 @@
         _scratchView.pathCount = 6 ;
         _scratchView.scratchViewDelegate = self ;
     }
-    
     return _scratchView;
 }
 

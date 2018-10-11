@@ -89,6 +89,7 @@
     size_t imageHeight = CGImageGetHeight(coveredImage);
     
     CFMutableDataRef pixels = CFDataCreateMutable(NULL, imageWidth * imageHeight);
+    CFDataSetLength(pixels, imageWidth * imageHeight);
     maskContext = CGBitmapContextCreate(CFDataGetMutableBytePtr(pixels), imageWidth, imageHeight , 8, imageWidth, colorspace, kCGImageAlphaNone);
     CGDataProviderRef dataProvider = CGDataProviderCreateWithCFData(pixels);
     
